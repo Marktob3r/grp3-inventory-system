@@ -7,5 +7,5 @@
 3. Lingad, Allysa (Scrum Master)
 4. Lobo, Vhenz Jemuel (Product Owner)
 
-#Status: <span style="color:green;">Deployed.</span>
+# Status: <span style="color:green;">Deployed.</span>
 -> https://grp3-inventory-system.vercel.app/
