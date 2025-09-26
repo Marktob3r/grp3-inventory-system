@@ -1,0 +1,193 @@
+:root {
+  --primary-color: #0070f3;
+  --secondary-color: #f6f6f6;
+  --text-color: #000000;
+  --border-color: #eaeaea;
+  --danger-color: #e00;
+  --edit-color: #007bff;
+  --cancel-color: #6c757d;
+}
+
+* {
+  user-select: none;
+  margin: 0;
+  padding: 0;
+  font-family: monospace;
+  box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  width: 3px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+body {
+  background: #c8c8c8;
+  color: var(--text-color);
+  overflow-x: hidden;
+}
+
+.main {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transform: scale(0.1);
+  animation: pop-in 0.6s ease-out forwards;
+}
+
+h1, h2 {
+  text-align: center;
+  color: var(--text-color);
+}
+
+h1 {
+  margin-bottom: 2rem;
+}
+
+h2 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.form-container {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+}
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+form input {
+  flex: 1 1 200px;
+  padding: 10px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+form button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  background-color: var(--primary-color);
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+form button:hover {
+  background-color: #005bb5;
+}
+
+.cancel-btn {
+  background-color: var(--cancel-color) !important;
+}
+.cancel-btn:hover {
+  background-color: #5a6268 !important;
+}
+
+.table-container {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table-container tbody {
+  overflow-y: scroll;
+}
+
+th, td {
+  padding: 12px 15px;
+  border: 1px solid var(--border-color);
+  text-align: center;
+}
+
+thead {
+  background-color: #f2f2f2;
+}
+
+tr:nth-of-type(even) {
+  background-color: #f9f9f9;
+}
+
+tr:hover {
+  background-color: #f1f1f1;
+}
+
+.actions {
+  display: flex 1;  
+}
+
+.actions button {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+  margin: 0 5px 0 5px;
+}
+
+.edit-btn {
+  background-color: var(--edit-color);
+  transition: 0.2s ease-in-out;
+}
+
+.edit-btn:hover {
+  background-color: #0069d9;
+}
+
+.delete-btn {
+  background-color: var(--danger-color);
+  transition: 0.2s ease-in-out;
+}
+.delete-btn:hover {
+  background-color: #c00;
+}
+
+@keyframes pop-in {
+  0% {
+    opacity: 0;
+    transform: scale(0.1);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(0.5);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
